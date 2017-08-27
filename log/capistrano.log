@@ -1483,3 +1483,220 @@
 * Environment: production
 * Daemonizing...
   INFO [eae7da26] Finished in 0.358 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-27 15:54:19 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [4f08d4d6] Running [ -d $HOME/.rbenv/versions/2.4.1 ] on 150.95.152.255
+ DEBUG [4f08d4d6] Command: [ -d $HOME/.rbenv/versions/2.4.1 ]
+ DEBUG [4f08d4d6] Finished in 0.484 seconds with exit status 0 (successful).
+  INFO [3f7b1272] Running /usr/bin/env mkdir -p /tmp on 150.95.152.255
+ DEBUG [3f7b1272] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [3f7b1272] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-portfolio-production-stobita.sh 0.0%
+  INFO Uploading /tmp/git-ssh-portfolio-production-stobita.sh 100.0%
+  INFO [d4d5d0d9] Running /usr/bin/env chmod 700 /tmp/git-ssh-portfolio-production-stobita.sh on 150.95.152.255
+ DEBUG [d4d5d0d9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-portfolio-production-stobita.sh )
+  INFO [d4d5d0d9] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [41e0ab6d] Running /usr/bin/env git ls-remote git@github.com:stobita/portfolio.git HEAD on 150.95.152.255
+ DEBUG [41e0ab6d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-portfolio-production-stobita.sh" ; /usr/bin/env git ls-remote git@github.com:stobita/portfolio.git HEAD )
+ DEBUG [41e0ab6d] 	3d3320be85769d75dc04e8994fc3ec30adc86d41	HEAD
+  INFO [41e0ab6d] Finished in 1.456 seconds with exit status 0 (successful).
+  INFO [99bc5dd0] Running /usr/bin/env mkdir -p /var/www/portfolio/shared /var/www/portfolio/releases on 150.95.152.255
+ DEBUG [99bc5dd0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env mkdir -p /var/www/portfolio/shared /var/www/portfolio/releases )
+  INFO [99bc5dd0] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [2f96468a] Running /usr/bin/env mkdir -p /var/www/portfolio/shared/log /var/www/portfolio/shared/tmp/pids /var/www/portfolio/shared/tmp/cache /var/www/portfolio/shared/tmp/sockets /var/www/portfolio/shared/vendor/bundle /var/www/portfolio/shared/public/system /var/www/portfolio/shared/public/uploads on 150.95.152.255
+ DEBUG [2f96468a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env mkdir -p /var/www/portfolio/shared/log /var/www/portfolio/shared/tmp/pids /var/www/portfolio/shared/tmp/cache /var/www/portfolio/shared/tmp/sockets /var/www/portfolio/shared/vendor/bundle /var/www/portfolio/shared/public/system /var/www/portfolio/shared/public/uploads )
+  INFO [2f96468a] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [9bfe5243] Running [ -f /var/www/portfolio/shared/puma.rb ] on 150.95.152.255
+ DEBUG [9bfe5243] Command: [ -f /var/www/portfolio/shared/puma.rb ]
+ DEBUG [9bfe5243] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [9d8197c5] Running [ -f /var/www/portfolio/current/REVISION ] on 150.95.152.255
+ DEBUG [9d8197c5] Command: [ -f /var/www/portfolio/current/REVISION ]
+ DEBUG [9d8197c5] Finished in 0.035 seconds with exit status 0 (successful).
+ DEBUG [f085d7a8] Running /usr/bin/env cat /var/www/portfolio/current/REVISION 2>/dev/null on 150.95.152.255
+ DEBUG [f085d7a8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env cat /var/www/portfolio/current/REVISION 2>/dev/null )
+ DEBUG [f085d7a8] 	72b7f634eac4f0db247cee73d1592098bb36e09a
+ DEBUG [f085d7a8] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [54b59268] Running [ -f /var/www/portfolio/repo/HEAD ] on 150.95.152.255
+ DEBUG [54b59268] Command: [ -f /var/www/portfolio/repo/HEAD ]
+ DEBUG [54b59268] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/portfolio/repo
+ DEBUG [4ccf7c45] Running if test ! -d /var/www/portfolio/repo; then echo "Directory does not exist '/var/www/portfolio/repo'" 1>&2; false; fi on 150.95.152.255
+ DEBUG [4ccf7c45] Command: if test ! -d /var/www/portfolio/repo; then echo "Directory does not exist '/var/www/portfolio/repo'" 1>&2; false; fi
+ DEBUG [4ccf7c45] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [4868b3b3] Running /usr/bin/env git remote set-url origin git@github.com:stobita/portfolio.git on 150.95.152.255
+ DEBUG [4868b3b3] Command: cd /var/www/portfolio/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-portfolio-production-stobita.sh" ; /usr/bin/env git remote set-url origin git@github.com:stobita/portfolio.git )
+  INFO [4868b3b3] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO [fbe0993b] Running /usr/bin/env git remote update --prune on 150.95.152.255
+ DEBUG [fbe0993b] Command: cd /var/www/portfolio/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-portfolio-production-stobita.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [fbe0993b] 	Fetching origin
+ DEBUG [fbe0993b] 	remote: Counting objects: 6, done.[K
+ DEBUG [fbe0993b] 	remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+ DEBUG [fbe0993b] 	remote: Total 6 (delta 2), reused 6 (delta 2), pack-reused 0[K
+ DEBUG [fbe0993b] 	Unpacking objects:  16% (1/6)   Unpacking objects:  33% (2/6)   Unpacking objects:  50% (3/6)   Unpacking objects:  66% (4/6)   Unpacking objects:  83% (5/6)   Unpacking objects: 100% (6/6)   Unpacking objects: 100% (6/6), done.
+ DEBUG [fbe0993b] 	From github.com:stobita/portfolio
+   72b7f63..3d3320b  master     -> master
+  INFO [fbe0993b] Finished in 1.689 seconds with exit status 0 (successful).
+ DEBUG [dc52c08f] Running if test ! -d /var/www/portfolio/repo; then echo "Directory does not exist '/var/www/portfolio/repo'" 1>&2; false; fi on 150.95.152.255
+ DEBUG [dc52c08f] Command: if test ! -d /var/www/portfolio/repo; then echo "Directory does not exist '/var/www/portfolio/repo'" 1>&2; false; fi
+ DEBUG [dc52c08f] Finished in 0.041 seconds with exit status 0 (successful).
+  INFO [a4268c32] Running /usr/bin/env mkdir -p /var/www/portfolio/releases/20170827065422 on 150.95.152.255
+ DEBUG [a4268c32] Command: cd /var/www/portfolio/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-portfolio-production-stobita.sh" ; /usr/bin/env mkdir -p /var/www/portfolio/releases/20170827065422 )
+  INFO [a4268c32] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [a04f18da] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/portfolio/releases/20170827065422 on 150.95.152.255
+ DEBUG [a04f18da] Command: cd /var/www/portfolio/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-portfolio-production-stobita.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/portfolio/releases/20170827065422 )
+  INFO [a04f18da] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG [b35bc733] Running if test ! -d /var/www/portfolio/repo; then echo "Directory does not exist '/var/www/portfolio/repo'" 1>&2; false; fi on 150.95.152.255
+ DEBUG [b35bc733] Command: if test ! -d /var/www/portfolio/repo; then echo "Directory does not exist '/var/www/portfolio/repo'" 1>&2; false; fi
+ DEBUG [b35bc733] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [9041cab2] Running /usr/bin/env git rev-list --max-count=1 master on 150.95.152.255
+ DEBUG [9041cab2] Command: cd /var/www/portfolio/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-portfolio-production-stobita.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9041cab2] 	3d3320be85769d75dc04e8994fc3ec30adc86d41
+ DEBUG [9041cab2] Finished in 0.037 seconds with exit status 0 (successful).
+ DEBUG [88c527a8] Running if test ! -d /var/www/portfolio/releases/20170827065422; then echo "Directory does not exist '/var/www/portfolio/releases/20170827065422'" 1>&2; false; fi on 150.95.152.255
+ DEBUG [88c527a8] Command: if test ! -d /var/www/portfolio/releases/20170827065422; then echo "Directory does not exist '/var/www/portfolio/releases/20170827065422'" 1>&2; false; fi
+ DEBUG [88c527a8] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO [f74528b0] Running /usr/bin/env echo "3d3320be85769d75dc04e8994fc3ec30adc86d41" >> REVISION on 150.95.152.255
+ DEBUG [f74528b0] Command: cd /var/www/portfolio/releases/20170827065422 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env echo "3d3320be85769d75dc04e8994fc3ec30adc86d41" >> REVISION )
+  INFO [f74528b0] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [bcfb8f6f] Running /usr/bin/env mkdir -p /var/www/portfolio/releases/20170827065422 /var/www/portfolio/releases/20170827065422/tmp /var/www/portfolio/releases/20170827065422/vendor /var/www/portfolio/releases/20170827065422/public on 150.95.152.255
+ DEBUG [bcfb8f6f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env mkdir -p /var/www/portfolio/releases/20170827065422 /var/www/portfolio/releases/20170827065422/tmp /var/www/portfolio/releases/20170827065422/vendor /var/www/portfolio/releases/20170827065422/public )
+  INFO [bcfb8f6f] Finished in 0.039 seconds with exit status 0 (successful).
+ DEBUG [2fa23aac] Running [ -L /var/www/portfolio/releases/20170827065422/log ] on 150.95.152.255
+ DEBUG [2fa23aac] Command: [ -L /var/www/portfolio/releases/20170827065422/log ]
+ DEBUG [2fa23aac] Finished in 0.051 seconds with exit status 1 (failed).
+ DEBUG [1fbd60a2] Running [ -d /var/www/portfolio/releases/20170827065422/log ] on 150.95.152.255
+ DEBUG [1fbd60a2] Command: [ -d /var/www/portfolio/releases/20170827065422/log ]
+ DEBUG [1fbd60a2] Finished in 0.035 seconds with exit status 0 (successful).
+  INFO [99bdb1dd] Running /usr/bin/env rm -rf /var/www/portfolio/releases/20170827065422/log on 150.95.152.255
+ DEBUG [99bdb1dd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env rm -rf /var/www/portfolio/releases/20170827065422/log )
+  INFO [99bdb1dd] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [ad4c6b98] Running /usr/bin/env ln -s /var/www/portfolio/shared/log /var/www/portfolio/releases/20170827065422/log on 150.95.152.255
+ DEBUG [ad4c6b98] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env ln -s /var/www/portfolio/shared/log /var/www/portfolio/releases/20170827065422/log )
+  INFO [ad4c6b98] Finished in 0.046 seconds with exit status 0 (successful).
+ DEBUG [b84b77f2] Running [ -L /var/www/portfolio/releases/20170827065422/tmp/pids ] on 150.95.152.255
+ DEBUG [b84b77f2] Command: [ -L /var/www/portfolio/releases/20170827065422/tmp/pids ]
+ DEBUG [b84b77f2] Finished in 0.039 seconds with exit status 1 (failed).
+ DEBUG [a8b5ba76] Running [ -d /var/www/portfolio/releases/20170827065422/tmp/pids ] on 150.95.152.255
+ DEBUG [a8b5ba76] Command: [ -d /var/www/portfolio/releases/20170827065422/tmp/pids ]
+ DEBUG [a8b5ba76] Finished in 0.062 seconds with exit status 1 (failed).
+  INFO [9a287051] Running /usr/bin/env ln -s /var/www/portfolio/shared/tmp/pids /var/www/portfolio/releases/20170827065422/tmp/pids on 150.95.152.255
+ DEBUG [9a287051] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env ln -s /var/www/portfolio/shared/tmp/pids /var/www/portfolio/releases/20170827065422/tmp/pids )
+  INFO [9a287051] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [f5a549f5] Running [ -L /var/www/portfolio/releases/20170827065422/tmp/cache ] on 150.95.152.255
+ DEBUG [f5a549f5] Command: [ -L /var/www/portfolio/releases/20170827065422/tmp/cache ]
+ DEBUG [f5a549f5] Finished in 0.276 seconds with exit status 1 (failed).
+ DEBUG [100c0aa5] Running [ -d /var/www/portfolio/releases/20170827065422/tmp/cache ] on 150.95.152.255
+ DEBUG [100c0aa5] Command: [ -d /var/www/portfolio/releases/20170827065422/tmp/cache ]
+ DEBUG [100c0aa5] Finished in 0.058 seconds with exit status 1 (failed).
+  INFO [479fb538] Running /usr/bin/env ln -s /var/www/portfolio/shared/tmp/cache /var/www/portfolio/releases/20170827065422/tmp/cache on 150.95.152.255
+ DEBUG [479fb538] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env ln -s /var/www/portfolio/shared/tmp/cache /var/www/portfolio/releases/20170827065422/tmp/cache )
+  INFO [479fb538] Finished in 0.044 seconds with exit status 0 (successful).
+ DEBUG [0041b8df] Running [ -L /var/www/portfolio/releases/20170827065422/tmp/sockets ] on 150.95.152.255
+ DEBUG [0041b8df] Command: [ -L /var/www/portfolio/releases/20170827065422/tmp/sockets ]
+ DEBUG [0041b8df] Finished in 0.062 seconds with exit status 1 (failed).
+ DEBUG [797b5612] Running [ -d /var/www/portfolio/releases/20170827065422/tmp/sockets ] on 150.95.152.255
+ DEBUG [797b5612] Command: [ -d /var/www/portfolio/releases/20170827065422/tmp/sockets ]
+ DEBUG [797b5612] Finished in 0.049 seconds with exit status 1 (failed).
+  INFO [ba0c4d15] Running /usr/bin/env ln -s /var/www/portfolio/shared/tmp/sockets /var/www/portfolio/releases/20170827065422/tmp/sockets on 150.95.152.255
+ DEBUG [ba0c4d15] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env ln -s /var/www/portfolio/shared/tmp/sockets /var/www/portfolio/releases/20170827065422/tmp/sockets )
+  INFO [ba0c4d15] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [fc0d1ca1] Running [ -L /var/www/portfolio/releases/20170827065422/vendor/bundle ] on 150.95.152.255
+ DEBUG [fc0d1ca1] Command: [ -L /var/www/portfolio/releases/20170827065422/vendor/bundle ]
+ DEBUG [fc0d1ca1] Finished in 0.037 seconds with exit status 1 (failed).
+ DEBUG [54679450] Running [ -d /var/www/portfolio/releases/20170827065422/vendor/bundle ] on 150.95.152.255
+ DEBUG [54679450] Command: [ -d /var/www/portfolio/releases/20170827065422/vendor/bundle ]
+ DEBUG [54679450] Finished in 0.037 seconds with exit status 1 (failed).
+  INFO [2174b3b7] Running /usr/bin/env ln -s /var/www/portfolio/shared/vendor/bundle /var/www/portfolio/releases/20170827065422/vendor/bundle on 150.95.152.255
+ DEBUG [2174b3b7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env ln -s /var/www/portfolio/shared/vendor/bundle /var/www/portfolio/releases/20170827065422/vendor/bundle )
+  INFO [2174b3b7] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [d7ec43b4] Running [ -L /var/www/portfolio/releases/20170827065422/public/system ] on 150.95.152.255
+ DEBUG [d7ec43b4] Command: [ -L /var/www/portfolio/releases/20170827065422/public/system ]
+ DEBUG [d7ec43b4] Finished in 0.056 seconds with exit status 1 (failed).
+ DEBUG [48bffb23] Running [ -d /var/www/portfolio/releases/20170827065422/public/system ] on 150.95.152.255
+ DEBUG [48bffb23] Command: [ -d /var/www/portfolio/releases/20170827065422/public/system ]
+ DEBUG [48bffb23] Finished in 0.063 seconds with exit status 1 (failed).
+  INFO [ec6ed309] Running /usr/bin/env ln -s /var/www/portfolio/shared/public/system /var/www/portfolio/releases/20170827065422/public/system on 150.95.152.255
+ DEBUG [ec6ed309] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env ln -s /var/www/portfolio/shared/public/system /var/www/portfolio/releases/20170827065422/public/system )
+  INFO [ec6ed309] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG [61c327fe] Running [ -L /var/www/portfolio/releases/20170827065422/public/uploads ] on 150.95.152.255
+ DEBUG [61c327fe] Command: [ -L /var/www/portfolio/releases/20170827065422/public/uploads ]
+ DEBUG [61c327fe] Finished in 0.050 seconds with exit status 1 (failed).
+ DEBUG [5b8889b7] Running [ -d /var/www/portfolio/releases/20170827065422/public/uploads ] on 150.95.152.255
+ DEBUG [5b8889b7] Command: [ -d /var/www/portfolio/releases/20170827065422/public/uploads ]
+ DEBUG [5b8889b7] Finished in 0.052 seconds with exit status 1 (failed).
+  INFO [4971e902] Running /usr/bin/env ln -s /var/www/portfolio/shared/public/uploads /var/www/portfolio/releases/20170827065422/public/uploads on 150.95.152.255
+ DEBUG [4971e902] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env ln -s /var/www/portfolio/shared/public/uploads /var/www/portfolio/releases/20170827065422/public/uploads )
+  INFO [4971e902] Finished in 0.037 seconds with exit status 0 (successful).
+ DEBUG [5c0ec51d] Running if test ! -d /var/www/portfolio/releases/20170827065422; then echo "Directory does not exist '/var/www/portfolio/releases/20170827065422'" 1>&2; false; fi on 150.95.152.255
+ DEBUG [5c0ec51d] Command: if test ! -d /var/www/portfolio/releases/20170827065422; then echo "Directory does not exist '/var/www/portfolio/releases/20170827065422'" 1>&2; false; fi
+ DEBUG [5c0ec51d] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [72ffef21] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/portfolio/shared/bundle on 150.95.152.255
+ DEBUG [72ffef21] Command: cd /var/www/portfolio/releases/20170827065422 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/portfolio/shared/bundle )
+ DEBUG [72ffef21] 	[31mThe following gems are missing[0m
+[31m * rake (12.0.0)[0m
+[31m * net-ssh (4.1.0)[0m
+[31m * net-scp (1.2.1)[0m
+[31m * sshkit (1.14.0)[0m
+[31m * airbrussh (1.3.0)[0m
+[31m * i18n (0.8.6)[0m
+[31m * capistrano (3.9.0)[0m
+[31m * capistrano-bundler (1.2.0)[0m
+[31m * capistrano-rbenv (2.1.1)[0m
+[31m * capistrano3-puma (3.1.1)[0m
+[33mInstall missing gems with `bundle install`[0m
+ DEBUG [72ffef21] Finished in 0.272 seconds with exit status 1 (failed).
+  INFO [ef0e5d2e] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/portfolio/shared/bundle --without development test --deployment --quiet on 150.95.152.255
+ DEBUG [ef0e5d2e] Command: cd /var/www/portfolio/releases/20170827065422 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/portfolio/shared/bundle --without development test --deployment --quiet )
+  INFO [ef0e5d2e] Finished in 1.420 seconds with exit status 0 (successful).
+  INFO [096b19ce] Running /usr/bin/env ln -s /var/www/portfolio/releases/20170827065422 /var/www/portfolio/releases/current on 150.95.152.255
+ DEBUG [096b19ce] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env ln -s /var/www/portfolio/releases/20170827065422 /var/www/portfolio/releases/current )
+  INFO [096b19ce] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [a128bbf2] Running /usr/bin/env mv /var/www/portfolio/releases/current /var/www/portfolio on 150.95.152.255
+ DEBUG [a128bbf2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env mv /var/www/portfolio/releases/current /var/www/portfolio )
+  INFO [a128bbf2] Finished in 0.037 seconds with exit status 0 (successful).
+ DEBUG [df5853f8] Running /usr/bin/env ls -x /var/www/portfolio/releases on 150.95.152.255
+ DEBUG [df5853f8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env ls -x /var/www/portfolio/releases )
+ DEBUG [df5853f8] 	20170827061009	20170827062803	20170827062957	20170827063603	20170827064856
+20170827065422
+ DEBUG [df5853f8] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 150.95.152.255
+  INFO [89473fc7] Running /usr/bin/env rm -rf /var/www/portfolio/releases/20170827061009 on 150.95.152.255
+ DEBUG [89473fc7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env rm -rf /var/www/portfolio/releases/20170827061009 )
+  INFO [89473fc7] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [c6d84e8b] Running if test ! -d /var/www/portfolio/releases; then echo "Directory does not exist '/var/www/portfolio/releases'" 1>&2; false; fi on 150.95.152.255
+ DEBUG [c6d84e8b] Command: if test ! -d /var/www/portfolio/releases; then echo "Directory does not exist '/var/www/portfolio/releases'" 1>&2; false; fi
+ DEBUG [c6d84e8b] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [57ead094] Running /usr/bin/env echo "Branch master (at 3d3320be85769d75dc04e8994fc3ec30adc86d41) deployed as release 20170827065422 by stobita" >> /var/www/portfolio/revisions.log on 150.95.152.255
+ DEBUG [57ead094] Command: cd /var/www/portfolio/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" ; /usr/bin/env echo "Branch master (at 3d3320be85769d75dc04e8994fc3ec30adc86d41) deployed as release 20170827065422 by stobita" >> /var/www/portfolio/revisions.log )
+  INFO [57ead094] Finished in 0.036 seconds with exit status 0 (successful).
+ DEBUG [faa336db] Running if test ! -d /var/www/portfolio/current; then echo "Directory does not exist '/var/www/portfolio/current'" 1>&2; false; fi on 150.95.152.255
+ DEBUG [faa336db] Command: if test ! -d /var/www/portfolio/current; then echo "Directory does not exist '/var/www/portfolio/current'" 1>&2; false; fi
+ DEBUG [faa336db] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [c64fbb67] Running [ -f /var/www/portfolio/shared/tmp/pids/puma.pid ] on 150.95.152.255
+ DEBUG [c64fbb67] Command: [ -f /var/www/portfolio/shared/tmp/pids/puma.pid ]
+ DEBUG [c64fbb67] Finished in 0.036 seconds with exit status 1 (failed).
+  INFO [054938f3] Running mkdir /var/www/portfolio/shared/tmp/sockets -p on 150.95.152.255
+ DEBUG [054938f3] Command: mkdir /var/www/portfolio/shared/tmp/sockets -p
+  INFO [054938f3] Finished in 0.036 seconds with exit status 0 (successful).
+  INFO [8bf6a995] Running mkdir /var/www/portfolio/shared/tmp/pids -p on 150.95.152.255
+ DEBUG [8bf6a995] Command: mkdir /var/www/portfolio/shared/tmp/pids -p
+  INFO [8bf6a995] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [399df1a3] Running [ -f /var/www/portfolio/shared/puma.rb ] on 150.95.152.255
+ DEBUG [399df1a3] Command: [ -f /var/www/portfolio/shared/puma.rb ]
+ DEBUG [399df1a3] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO using conf file /var/www/portfolio/shared/puma.rb
+ DEBUG [67cf31d3] Running [ -f /var/www/portfolio/shared/tmp/pids/puma.pid ] on 150.95.152.255
+ DEBUG [67cf31d3] Command: [ -f /var/www/portfolio/shared/tmp/pids/puma.pid ]
+ DEBUG [67cf31d3] Finished in 0.047 seconds with exit status 1 (failed).
+ DEBUG [db9512ce] Running if test ! -d /var/www/portfolio/current; then echo "Directory does not exist '/var/www/portfolio/current'" 1>&2; false; fi on 150.95.152.255
+ DEBUG [db9512ce] Command: if test ! -d /var/www/portfolio/current; then echo "Directory does not exist '/var/www/portfolio/current'" 1>&2; false; fi
+ DEBUG [db9512ce] Finished in 0.035 seconds with exit status 0 (successful).
+  INFO [ab7b9a6b] Running $HOME/.rbenv/bin/rbenv exec bundle exec puma -C /var/www/portfolio/shared/puma.rb --daemon on 150.95.152.255
+ DEBUG [ab7b9a6b] Command: cd /var/www/portfolio/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.1" RACK_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec puma -C /var/www/portfolio/shared/puma.rb --daemon )
+ DEBUG [ab7b9a6b] 	Puma starting in single mode...
+* Version 3.10.0 (ruby 2.4.1-p111), codename: Russell's Teapot
+* Min threads: 4, max threads: 16
+* Environment: production
+* Daemonizing...
+  INFO [ab7b9a6b] Finished in 0.355 seconds with exit status 0 (successful).
