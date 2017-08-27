@@ -1,5 +1,6 @@
 require 'sinatra'
+require "sinatra/reloader" if development?
 
 get '/' do
-    "<h1>This is Portfolio<h1>"
+    erb :index
 end
