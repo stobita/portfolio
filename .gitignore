@@ -5,3 +5,5 @@
 vendor/bundle
 
 config/deploy.rb
+
+.sass-cache
