@@ -1,10 +1,10 @@
 # config valid only for current version of Capistrano
 lock "3.9.0"
 
-server '150.95.152.255', roles: [:app, :web, :db], primary: true
+server 'xxx.xx.xxx.xxx', roles: [:app, :web, :db], primary: true
 set :repo_url,        'git@github.com:stobita/portfolio.git'
 set :application,     'portfolio'
-set :user,            'stobita'
+set :user,            'deploy_user'
 set :ssh_options,     {
   forward_agent: true,
   user: fetch(:user),
