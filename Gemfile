@@ -5,6 +5,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem 'sinatra'
 gem 'puma'
+gem "sass"
 
 # for deploy
 group :development do
