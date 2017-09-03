@@ -1,0 +1,133 @@
+.header-area-sub{
+  text-align: center;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+    line-height: 70px;
+  }
+  img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 320px;
+    width: auto;
+    z-index: -1;
+  }
+}
+.bottom-image{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 320px;
+  width: auto;
+  z-index: -1;
+}
+.left-area{
+  width: 15%;
+  display: inline-block;
+  float: left;
+  padding-top: 100px;
+  margin-left: 5%;
+}
+.main-area{
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+  h2{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  h3{
+    font-size: 1rem;
+  }
+  .main-image{
+    padding-top: 100px;
+    img{
+      height: 400px;
+      width: auto;
+      position: relative;
+      z-index: -1
+    }
+  }
+}
+.right-area{
+  width: 15%;
+  display: inline-block;
+  float: right;
+  padding-top: 100px;
+  margin-right: 5%
+}
+
+.circle{
+  height: 160px;
+  width: 160px;
+  border-radius: 80px;
+  background-color: #333;
+  text-align: center;
+  line-height: 160px;
+  color: #fff;
+  margin: 0 auto;
+  font-weight: bold;
+  margin-bottom: 50px;
+  a{
+    color: #fff;
+    height: 160px;
+    width: 160px;
+    border-radius: 80px;
+    display: block;
+  }
+}
+.github-circle{
+  a{
+    &:before{
+      content: "\f09b";
+      font-family: FontAwesome;
+      color: #fff;
+    }
+  }
+}
+.blog-circle{
+  a{
+    &:before{
+      content:"\f044";
+      font-family: FontAwesome;
+      color: #fff;
+    }
+  }
+}
+
+.github{
+  background: #333;
+  padding: 10px 0;
+  border-radius: 5px;
+  width: 60%;
+  margin: 10px auto;
+  a{
+    color: #fff;
+  }
+  &:before{
+    content: "\f09b";
+    font-family: FontAwesome;
+    color: #fff;
+  }
+}
+.blog{
+  background: #333;
+  padding: 10px 0;
+  border-radius: 5px;
+  width: 60%;
+  margin: 10px auto;
+  a{
+    color: #fff;
+  }
+}
+header{
+  margin: 0;
+}
+body{
+  background: #fff;
+}
