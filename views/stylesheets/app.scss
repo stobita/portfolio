@@ -5,8 +5,6 @@ $high-sub-color: #ffc399;
 html,body{
   height: 100%;
 }
-body{
-}
 h1,h2,h3,h4,body,li,ul{
   margin: 0;
   padding: 0;
@@ -19,7 +17,7 @@ a{
   text-decoration: none;
   color: $main-color;
 }
-div,p{
+div,p,header{
   margin: 0;
 }
 
@@ -28,7 +26,7 @@ body{
   background: #EEEEEE;
 }
 header{
-  margin-top: 5%;
+  padding-top: 5%;
   text-align: center;
   h2{
     margin-top: 0.5%;
@@ -38,6 +36,9 @@ header{
     font-size: 0.8rem;
     margin-bottom: 2%;
   }
+}
+.main-area{
+  height: auto;
 }
 .tl-corner:before{
   position:absolute;
@@ -90,10 +91,11 @@ header{
   border-left:calc(100vw / 3.5) solid #df6209;
   z-index: -2;
 }
-.design-box{
+.design-box,.products-box{
   width: 70%;
   margin: 0 auto;
   z-index: 1;
+  height: 100%;
   li{
     height: auto;
     background: #DDDDDD;
@@ -102,13 +104,13 @@ header{
     display: block;
     padding: 5px;
     position: relative;
-    min-height: 120px;
-    .design-text{
+    min-height: 150px;
+    .artifact-text{
       display: inline-block;
       width: 75%;
       height: 100%;
       overflow: hidden;
-      .design-title{
+      .artifact-title{
         font-weight: bold;
         display: inline-block;
         text-align: left;
@@ -118,7 +120,7 @@ header{
           color: $sub-color;
         }
       }
-      .design-description{
+      .artifact-description{
         font-weight: normal;
         font-size: 0.7rem;
         text-align: left;
@@ -133,7 +135,7 @@ header{
         }
       }
     }
-    .design-image{
+    .artifact-image{
       display: inline-block;
       width: 20%;
       height: 100%;
@@ -172,5 +174,16 @@ header{
   img{
     width: 30%;
     height: auto;
+  }
+}
+.contact-main{
+  text-align: center;
+  img{
+    width: 30%;
+    height: auto;
+  }
+  .contact-box{
+    width: 60%;
+    margin: 0 auto;
   }
 }

@@ -1,0 +1,33 @@
+<div class="contact-main">
+  <div class="tl-corner">
+  </div>
+  <div class="tr-corner">
+  </div>
+  <div class="bl-corner">
+  </div>
+  <div class="br-corner">
+  </div>
+  <header>
+    <%= erb :header %>
+    <h2>お問い合わせ</h2>
+  </header>
+  <div class="contact-box">
+    <form id="form" action="/contact/confirm" method="post">
+      <p>
+        <label for="name-form" class="name-label">お名前</label><br>
+        <input type="text" name="name" value="" id="name-form">
+      </p>
+      <p>
+        <label for="email-form" class="email-label">メールアドレス</label><br>
+        <input type="text" name="email" value="" id="email-form">
+      </p>
+      <p>
+        <label for="message-form" class="message-label">お問い合わせ内容</label><br>
+        <textarea name="message" id="message-form"></textarea>
+      </p>
+      <p>
+        <input type="submit" value="確認">
+      </p>
+    </form>
+  </div>
+</div>

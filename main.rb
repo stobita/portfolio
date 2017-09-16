@@ -17,6 +17,14 @@ get '/history' do
     erb :history
 end
 
+get '/contact' do
+    erb :'contact'
+end
+
+post 'contact/confirm' do
+    erb :'contact/confirm'
+end
+
 get '/design/portfolio-sample' do
     erb :'design/portfolio-sample'
 end
