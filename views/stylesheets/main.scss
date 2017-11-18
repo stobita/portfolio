@@ -3,6 +3,7 @@ $sub-color: #df6209;
 
 html,body{
   height: 100%;
+  color: #333;
 }
 body{
 }
@@ -31,6 +32,9 @@ sample
 */
 body{
   background: #EEEEEE;
+}
+.page-title{
+  color: #333;
 }
 .contents:before{
   position:absolute;
@@ -301,6 +305,24 @@ body{
     &:hover{
       background: $sub-color;
       letter-spacing: 3px;
+    }
+  }
+}
+
+.history-box{
+  table{
+    width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    th{
+      background-color: #333;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+    td{
+      background-color: #fff;
+      font-size: 0.8rem;
+      padding: 5px;
     }
   }
 }
