@@ -188,3 +188,130 @@ header{
     margin: 0 auto;
   }
 }
+
+.history-box, .history-box-mobile{
+  table{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    th{
+      background-color: #333;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+    td{
+      background-color: #fff;
+      font-size: 0.8rem;
+      padding: 5px;
+    }
+  }
+  .career{
+    margin-bottom: 100px;
+    td{
+      text-align: left;
+    }
+  }
+}
+
+.products-box-mobile{
+  display: none;
+}
+.history-box-mobile,.history-footer,.up-arrow{
+  display: none;
+}
+
+@media only screen and (max-width: 480px){
+  .main-area{
+    background: $main-color;
+  }
+  .up-arrow{
+    display: block;
+    border: 20px solid transparent;
+    border-bottom: 20px solid $sub-color;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    margin-top: -20px;
+  }
+  .tl-corner,.tr-corner,.bl-corner,.br-corner,.design-box,.history-box{
+    display: none;
+  }
+  .history-box-mobile{
+    display: inline-block;
+    table{
+      width: 100%;
+    }
+    .career{
+      margin-bottom: 0;
+      td{
+        text-align: left;
+      }
+    }
+  }
+  .history-footer{
+    display: inline-block;
+    background: $main-color;
+  }
+  .products-box-mobile{
+    width: 100%;
+    display: inline-block;
+    overflow: auto;
+    text-align: center;
+    background: $main-color;
+    color: white;
+    a{
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    p{
+      a{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+      }
+      margin: 10% 5%;
+    }
+  }
+  header{
+    padding: 0;
+    background: $sub-color;
+    color: white;
+    padding-bottom: 5%;
+    h2{
+      margin-top: 8%;
+    }
+    h3{
+      display: none;
+    }
+  }
+  .header-area{
+    background: $main-color;
+    color: #fff;
+    margin-bottom: 5px;
+    padding-top: 7%;
+    padding-bottom: 5%;
+    h1{
+      color: white;
+      margin-bottom: 2%;
+      font-size: 2rem;
+      &:after{
+        content: '';
+        background-image: url(../../images/icon-white.png);
+        background-size: contain;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: bottom;
+        margin-left: 5px;
+      }
+    }
+    h2{
+      font-size: 0.8rem;
+    }
+  }
+  .products-box{
+    display: none;
+  }
+}
