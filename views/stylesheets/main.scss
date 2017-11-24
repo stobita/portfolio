@@ -1,6 +1,40 @@
 $main-color: #333;
 $sub-color: #df6209;
 
+.orange-bg{
+  background: $sub-color;
+}
+
+.black-bg{
+  background: $main-color;
+}
+
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+
+.text-white{
+  color: #fff;
+}
+
+.text-orange{
+  color: $sub-color;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+
+.mb-5{
+  margin-bottom: 5%;
+}
+.mb-10{
+  margin-bottom: 10%;
+}
+
 html,body{
   height: 100%;
   color: #333;
@@ -330,6 +364,88 @@ body{
     margin-bottom: 100px;
     td{
       text-align: left;
+    }
+  }
+}
+
+.contents-mobile{
+  display: none;
+}
+.footer-mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .contents-mobile{
+    display: block;
+  }
+  .title-area{
+    background: $main-color;
+    color: #fff;
+    margin-bottom: 5px;
+    padding-top: 7%;
+    padding-bottom: 5%;
+    h1{
+      margin-bottom: 5%;
+      font-size: 2rem;
+      &:after{
+        content: '';
+        background-image: url(../../images/icon-white.png);
+        background-size: contain;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: bottom;
+        margin-left: 5px;
+      }
+    }
+    h2{
+      font-size: 0.8rem;
+    }
+  }
+  .contents{
+    display: none;
+  }
+  .contents-mobile{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    .square{
+      width: calc(100vw / 2.5);
+      height: calc(100vw / 2.5);
+      line-height: calc(100vw / 2.5);
+      display: inline-block;
+      text-align: center;
+      margin: 5px 5px;
+      a{
+        font-size: 7vw;
+        p{
+          vertical-align: middle;
+        }
+        i{
+          font-size: 14vw;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .footer-mobile{
+    display: block;
+    margin-top: 5px;
+    padding: 10% 5%;
+    font-size: 0.9rem;
+    text-align: center;
+    p{
+      margin: 10px 0;
+      &.description-head{
+        margin-bottom: 10%;
+      }
+    }
+    .contact{
+      background: $sub-color;
+      padding: 5px 0;
+      margin: 5px 0;
+      margin-top: 10%;
     }
   }
 }
